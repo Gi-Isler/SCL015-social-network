@@ -3,3 +3,4 @@ import { myFunction } from './lib/index.js';
 import { login } from './lib/view/templateLogin.js';
 
 myFunction();
+document.getElementById('root').innerHTML = login()
