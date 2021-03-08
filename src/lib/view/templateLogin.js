@@ -2,7 +2,7 @@ export const login = () => {
   const divLogin = document.createElement('div');
   const viewLogin = ` 
     <div id="containerLogo">
-      <img src="images/logo1.png" id="logo1">
+      <img src="images/logo.png" id="logo">
     </div>
     <div id="login" class="login">
       <input type="nombreUsuario" id="nombreUsuario" name="usuario" placeholder="Nombre Usuario"/>
@@ -17,6 +17,10 @@ export const login = () => {
     </div>  
     `;
   divLogin.innerHTML = viewLogin;
+  const restroForm = divLogin.querySelector('#btnCheckIn');
+  restroForm.addEventListener('click', () => {
+    window.location.href = '#/registro';
+  })
 
   return divLogin;
 };
