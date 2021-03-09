@@ -1,6 +1,7 @@
 * {
     margin: 0%;
     padding: 0%;
+    background-color: white;
 }
 
 #inputImgLogo{
@@ -15,17 +16,31 @@
     width: 100px;
      
 }
+#conteinerLogin{
+    background-color: #F3F3F3;;
+   
+}
 
-#contendorBaseRegistro{
+#containerBaseLogin{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+}
+
+#conteinerWall{
+    background-color: #F3F3F3;;
+    
+}
+#contendorBaseRegistro{  
     position: absolute;
     display: flex;
     flex-direction: column;
     justify-content: center;
- 
 
-    
-   
 }
+
+
 
 h2{
 position: absolute;
@@ -33,11 +48,10 @@ width: 254.09px;
 height: 9.87px;
 left: 51.12px;
 top: 563px;
-
-font-family: Caveat;
+font-family:'Caveat Brush', cursive;
 font-style: normal;
 font-weight: normal;
-font-size: 12px;
+font-size: 15px;
 line-height: 140.62%;
 /* or 17px */
 
