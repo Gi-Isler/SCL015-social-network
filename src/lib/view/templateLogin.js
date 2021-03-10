@@ -3,7 +3,7 @@ import { loginGoo } from '../index.js';
 export const login = () => {
   const divLogin = document.createElement('div');
   const viewLogin = ` 
-    <div id="containerBaseLogin">
+    <div id="containerBaseLogin" class="containerBase">
       <img id="inputImgLogo" src="images/logo.png" class="img">
       <input type="nombreUsuario" id="nombreUsuario" class="inputlogin" name="usuario" placeholder="Nombre Usuario"/>
       <input type="password" id="password"class="inputlogin" name="Password" placeholder="Password"minlength="6" maxlength="8" required>
@@ -16,13 +16,13 @@ export const login = () => {
     `;
   divLogin.innerHTML = viewLogin;
   const btnGoogle = divLogin.querySelector('#botonGoogle');
- btnGoogle.addEventListener('click', () => {
-  loginGoo()
- })
+  btnGoogle.addEventListener('click', () => {
+    loginGoo()
+  });
   const restroForm = divLogin.querySelector('#btnCheckIn');
   restroForm.addEventListener('click', () => {
     window.location.href = '#/registro';
-  })
+  });
 
-  return divLogin;
+ return divLogin;
 };

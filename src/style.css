@@ -1,10 +1,10 @@
 * {
     margin: 0%;
     padding: 0%;
-    background-color: white;
 }
-         /* template login */
-#containerBaseLogin{
+ /*----------- template login-------------- */
+
+.containerBase{
     position: absolute;
     display: flex;
     flex-direction: column;
@@ -15,19 +15,21 @@
     border-color:white;
 }  
 #inputImgLogo{
-    max-width: 100%;
-    width: 350px;
-    left: 10%;
     background-color:#F3F3F3;
+    max-width: 100%;
+    width: 350%;
+    left: 10%;
+    margin-top:-60% ;
 }
 .inputlogin{
     border-radius: 100px;
-  padding: 10px 15px;
-  width: 50%;
-  border: 1px solid #D9D9D9;
-  outline: none;
-  display: block;
-  margin: 20px auto 20px auto;
+    padding: 5% 20%; 
+    width: 80%;
+    border: 1px solid #D9D9D9;
+    outline: none;
+    display: block;
+    margin: 12% auto 2% auto;
+    text-align: center;
 }
 #btnEnter{
     background-color:#002060;
@@ -35,44 +37,48 @@
     border: none;
     width: 50%;
     padding: 10px;
-    color: #FFFFFF;
+    color: #c4c4c4;
     margin-top: 25px;
-    box-shadow: 0 2px 10px -3px #719BE6;
+    box-shadow: 0 2px 10px -3px;
     display: block;
     margin: 55px auto 10px auto;
+}
+#recoverPassword{
+    background-color:#346D78;
+    margin: 11%;
+    padding: 4%;
+    color: #c4c4c4;
 }
 #botonGoogle{
     background-size:cover;
     background-color:#F3F3F3;
-    margin: 5%;
+    margin:1% -8% -21% 17%;
     padding: 10%;
     width: 45%;
     outline:none;
 }   
 #btnCheckIn{
     background-color:#002060;
-    border-radius: 100%;
+    border-radius: 100px;
     border: none;
     width: 50%;
-    padding: 10%;
-    color: #FFFFFF;
-    margin-top: 25%;
-    box-shadow: 0 2% 10% -3% #719BE6;
+    padding: 10px;
+    color: #c4c4c4;
+    margin-top: 25px;
+    box-shadow: 0 2px 10px -3px;
     display: block;
-    margin: 55% auto 10% auto;
+    margin: 55px auto 10px auto;
 }
-      /* template registro */
-#conteinerWall{
-    background-color: #F3F3F3;;
-    
-}
-#contendorBaseRegistro{  
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+h3{
+    font-family:'Caveat Brush', cursive;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 125%;  
+    text-align: center;
+    color:#346D78;
+}  
+/*---------------- template registro-------------- */
 
-}
 h2{
 position: absolute;
 width: 254.09px;
@@ -85,19 +91,24 @@ font-weight: normal;
 font-size: 15px;
 line-height: 140.62%;
 /* or 17px */
-
 text-align: center;
-
 color: rgba(52, 109, 120, 0.6);
-
 transform: rotate(0.7deg);
 }
-h3{
-    font-family:'Caveat Brush', cursive;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 15px;  
-    text-align: center;
-    color: rgba(52, 109, 120, 0.6);
+/* ---------------template Bienvenida---------------- */
 
+nav {
+    position: relative;
+    flex-direction: row;
+}
+.search{
+    align-content: flex-end;
+    margin: -73% -11% -5% -26%;
+    padding: 35% 10% 35% 10%;
+    height: 20%;
+    width: 40%;
+}
+ul {
+    list-style: none;
+    flex-direction: row;
 }
