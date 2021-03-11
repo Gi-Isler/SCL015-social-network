@@ -5,9 +5,9 @@ import { observador } from '../index.js';
 export const login = () => {
   const divLogin = document.createElement('div');
   const viewLogin = ` 
-    <div id="containerBaseLogin">
+    <div id="containerBaseLogin" class="containerBase">
       <img id="inputImgLogo" src="images/logo.png" class="img">
-      <input type="email" id="emailLogin" class="inputlogin" name="usuario" placeholder="Nombre Usuario"/>
+      <input type="email" id="emailLogin" class="inputlogin" name="usuario" placeholder="Email"/>
       <input type="password" id="passwordLogin"class="inputlogin" name="Password" placeholder="Password"minlength="6" maxlength="8" required>
       <button id="btnEnter" class="btnEnter">Entrar</button>
       <button id="recoverPassword" class="recoverPassword">Recuperar mi contraseña</button>
@@ -20,7 +20,7 @@ divLogin.innerHTML = viewLogin;
 
 const userApp = divLogin.querySelector('#btnEnter');
 userApp.addEventListener('click', () => {
-loginExistente()
+loginExistente(), observador()
 })
   
 const btnGoogle = divLogin.querySelector('#botonGoogle');
