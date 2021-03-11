@@ -15,7 +15,13 @@ export const loginExistente = () => {
   .then((user) => {
     // Signed in
     // ...
-    window.location.href = '#/bienvenida';
+    if (user.user.emailVerified === true){
+   
+      window.location.href = '#/bienvenida';
+    }else {
+      alert('Aun no confirmas el link en tu correo');
+    }
+   
   })
   .catch((error) => {
     var errorCode = error.code;
@@ -36,16 +42,30 @@ export const registrarme = () => {
   //Muestra de codigo de firebase:
   firebase.auth().createUserWithEmailAndPassword(email, contrasena)
   .then((user) => {
-    // Signed in
-    // ...
+   // Signed in
+   // ...
+   console.log(user)
+   var usuario = firebase.auth().currentUser;
+   usuario.sendEmailVerification().then(function() {
+    // Email sent.
+    alert('Te hemos enviado un correo. Validalo')
+    console.log('Enviendo correo...');
+  }).catch(function(error) {
+    // An error happened.
+    console.log('error');
+  });
+  /*if (user.user.emailVerified === true){
+   
     window.location.href = '#/bienvenida';
+  }else {
+    alert('Aun no confirmas el link en tu correo');
+  }*/
   })
   .catch((error) => {
     var errorCode = error.code;
     var errorMessage = error.message;
     // ..
-    console.log(email);
-    console.log(contrasena);
+    
   });
   
 
@@ -90,6 +110,7 @@ export const observador = () => {
       // https://firebase.google.com/docs/reference/js/firebase.User
       var displayName = user.displayName;
       var email = user.email;
+      console.log(user.emailVerified)
       var emailVerified = user.emailVerified;
       var photoURL = user.photoURL;
       var isAnonymous = user.isAnonymous;
@@ -103,4 +124,18 @@ export const observador = () => {
       // ...
     }
   });
+}
+export const validar = () => {
+
+//Muestra de codigo de firebase:
+/*var user = firebase.auth().currentUser;
+
+user.sendEmailVerification().then(function() {
+  // Email sent.
+  alert('Te hemos enviado un correo. Validalo')
+  console.log('Enviendo correo...');
+}).catch(function(error) {
+  // An error happened.
+  console.log('error');
+});*/
 }

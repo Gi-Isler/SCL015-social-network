@@ -49,6 +49,7 @@
     margin: 11%;
     padding: 4%;
     color: #c4c4c4;
+    cursor: pointer;
 }
 #botonGoogle{
     background-size:cover;
