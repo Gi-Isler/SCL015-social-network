@@ -44,6 +44,7 @@ export const registrarme = () => {
   .then((user) => {
    // Signed in
    // ...
+   window.location.href = '#/login';
    console.log(user)
    var usuario = firebase.auth().currentUser;
    usuario.sendEmailVerification().then(function() {
@@ -137,5 +138,5 @@ user.sendEmailVerification().then(function() {
 }).catch(function(error) {
   // An error happened.
   console.log('error');
-});*/
+});'*/
 }

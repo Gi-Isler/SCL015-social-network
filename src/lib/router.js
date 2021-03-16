@@ -16,6 +16,9 @@ const showTemplate = (hash) => {
     case '#/':
       containerRoot.appendChild(login());
       break;
+      case '#/login':
+      containerRoot.appendChild(login());
+      break;
     case '#/registro':
       containerRoot.appendChild(registro());
       break;
