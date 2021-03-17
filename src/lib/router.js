@@ -1,6 +1,6 @@
 import { login } from '../lib/view/templateLogin.js';
 import { registro } from '../lib/view/templateRegistro.js';
-import { recuperarContrasena } from '../view/templateRecuperarContrasena.js';
+import { recuperarContrasena } from './view/templateRecuperarContrasena.js';
 //import { escribeNuevaContraseña } from '../lib/view/templateEscribeNuevaContraseña.js';
 import { bienvenida } from '../lib/view/templateBienvenida.js';
 //import { editarPerfil } from '../lib/view/templateEditarPerfil.js';
