@@ -1,6 +1,7 @@
 import { registrarme } from '../index.js';
 import { validar } from '../index.js';
 import { observador } from '../index.js';
+
 export const bienvenida = () => {
   const divBienvenida = document.createElement('div');
   const viewBienvenida = ` 

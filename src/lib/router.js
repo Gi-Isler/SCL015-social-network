@@ -1,6 +1,6 @@
 import { login } from '../lib/view/templateLogin.js';
 import { registro } from '../lib/view/templateRegistro.js';
-//import { recuperarContraseña } from '../lib/view/templateRecuperarContraseña.js';
+import { recuperarContrasena } from '../view/templateRecuperarContrasena.js';
 //import { escribeNuevaContraseña } from '../lib/view/templateEscribeNuevaContraseña.js';
 import { bienvenida } from '../lib/view/templateBienvenida.js';
 //import { editarPerfil } from '../lib/view/templateEditarPerfil.js';
@@ -25,6 +25,9 @@ const showTemplate = (hash) => {
     case '#/bienvenida':
       containerRoot.appendChild(bienvenida());
       break;
+      case '#/recuperarContrasena':
+      containerRoot.appendChild(recuperarContrasena());
+      break;
     default:
       containerRoot.innerHTML =`<h1>Pagina no existe</h1>`
       
@@ -41,8 +44,9 @@ export const changeRoute = (hash) => {
     return showTemplate (hash)
   } else if ( hash === '#/bienvenida'){
     return showTemplate (hash)
-  } 
-  else {
+  } else if ( hash === '#/recuperarContrasena'){
+    return showTemplate (hash)
+  } else {
     return showTemplate (hash) 
   }
 }

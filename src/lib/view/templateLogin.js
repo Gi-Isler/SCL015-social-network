@@ -1,6 +1,7 @@
 import { loginGoo } from '../index.js';
 import { loginExistente } from '../index.js';
 import { observador } from '../index.js';
+import { mostrarContrasenaLogin } from '../index.js';
 
 export const login = () => {
   const divLogin = document.createElement('div');
@@ -9,6 +10,10 @@ export const login = () => {
       <img id="ImgLogo" src="images/logo.png" class="img">
       <input type="email" id="emailLogin" class="inputlogin" name="usuario" placeholder="Correo Electronico"/>
       <input type="password" id="passwordLogin"class="inputlogin" name="Password" placeholder="Password"minlength="6" maxlength="8" required>
+
+     
+      <img id="eyeOpen" class="eyeOpen" src="images/eyelashes.png" type="button">
+
       <button id="btnEnter" class="btnEnter">Entrar</button>
       <button id="recoverPassword" class="recoverPassword">Recuperar mi contraseña</button>
       <h3>Ingresa con tus redes</h3>
@@ -17,6 +22,11 @@ export const login = () => {
     </div>
     `;
   divLogin.innerHTML = viewLogin;
+
+ const abrirOjo = divLogin.querySelector('#eyeOpen');
+  abrirOjo.addEventListener('click', () => {
+    mostrarContrasenaLogin()
+  })
 
   const userApp = divLogin.querySelector('#btnEnter');
   userApp.addEventListener('click', () => {
@@ -35,3 +45,4 @@ export const login = () => {
   observador()
   return divLogin;
 };
+
