@@ -50,41 +50,39 @@ export const registrarme = () => {
   const email = document.querySelector('#email').value;    
   //const name = document.querySelector('#name').value;
   const contrasena = document.querySelector('#contrasena').value;
-
+  console.log('Hola soy la funcion de registrarme')
+  
   //Muestra de codigo de firebase:
   firebase.auth().createUserWithEmailAndPassword(email, contrasena)
   .then((user) => {
-   // Signed in
-   // ...
    window.location.href = '#/login';
    console.log(user)
    var usuario = firebase.auth().currentUser;
-   usuario.sendEmailVerification().then(function() {
+   usuario.sendEmailVerification()
+    .then(function() {
     // Email sent.
-    alert('Te hemos enviado un correo. Validalo')
-    console.log('Enviendo correo...');
+      alert('Te hemos enviado un correo. Validalo')
+      console.log('Enviendo correo...');
 
-  }).catch(function(error) {
+    }).catch(function(pepita) {
     // An error happened.
-    console.log('error');
-  });
-
-  if (user.user.emailVerified === true){
-   alert('Este usuario ya existe')
-   //window.location.href = '#/recuperarContrasena';
-  }else {
-  window.location.href = '#/recuperarContrasena';
-    // hacer tamplate de Recuperarcontrasena;
-  }
- 
+      console.log('estamos dentro de la catch')
+      console.log(pepita);
+    
+      });
   })
-  .catch((error) => {
-    var errorCode = error.code;
-    var errorMessage = error.message;
+  .catch((papita) => {
+    var errorCode = papita.code;
+    var errorMessage = papita.message;
     // ..  
+    if(errorCode === 'auth/email-already-in-use'){
+      console.log('ya esta en uso')
+      alert('Este usuario ya existe')
+      window.location.href = '#/login';
+    }
+    
   });
 }
-
 export const mostrarContrasenaRegistro = () => {
   const eyeOpen = document.querySelector('#eyeOpen');
   const contrasena = document.querySelector('#contrasena');
@@ -137,8 +135,10 @@ export const observador = () => {
       // https://firebase.google.com/docs/reference/js/firebase.User
       var displayName = user.displayName;
       var email = user.email;
-      console.log(user.emailVerified)
+      console.log(email)
+      
       var emailVerified = user.emailVerified;
+      console.log(emailVerified)
       var photoURL = user.photoURL;
       var isAnonymous = user.isAnonymous;
       var uid = user.uid;
