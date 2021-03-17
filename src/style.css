@@ -2,9 +2,9 @@
     margin: 0%;
     padding: 0%;
 }
- /*----------- template login-------------- */
 
-.containerBase{
+
+/*.containerBase{
     position: absolute;
     display: flex;
     flex-direction: column;
@@ -78,7 +78,7 @@ h3{
     text-align: center;
     color:#346D78;
 }  
-/*---------------- template registro-------------- */
+//---------------- template registro-------------- 
 
 .img{
     background-color:#F3F3F3;
@@ -131,7 +131,7 @@ h2{
     margin: 37px auto 10px auto; 
 
 }
-/* ---------------template Bienvenida---------------- */
+// ---------------template Bienvenida---------------- 
 
 .logoNavContainer{
     display: flex;
@@ -156,3 +156,115 @@ ul li a{
     display: block;
     padding: 0.5rem 1rem;
 }
+
+         /* template login */
+         #containerBaseLogin{
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            justify-content: center; 
+            padding:30%;
+            margin:3%;
+            background-color:#F3F3F3;
+            border-color:white;
+        }  
+        #inputImgLogo{
+            max-width: 100%;
+            width: 350px;
+            left: 10%;
+            background-color:#F3F3F3;
+        }
+        .inputlogin{
+            border-radius: 100px;
+          padding: 10px 15px;
+          width: 50%;
+          border: 1px solid #D9D9D9;
+          outline: none;
+          display: block;
+          margin: 20px auto 20px auto;
+        }
+        
+        #eyeOpen{
+            border-radius: 100px;
+            border: none;
+            width: 10%;
+            padding: 10px;
+            color: #FFFFFF;
+            margin-top: 25px;
+            display: block;
+            margin: 55px auto 10px auto;
+            cursor: pointer;
+        }
+        
+        #btnEnter{
+            background-color:#002060;
+            border-radius: 100px;
+            border: none;
+            width: 50%;
+            padding: 10px;
+            color: #FFFFFF;
+            margin-top: 25px;
+            box-shadow: 0 2px 10px -3px #719BE6;
+            display: block;
+            margin: 55px auto 10px auto;
+        }
+        #botonGoogle{
+            background-size:cover;
+            background-color:#F3F3F3;
+            margin: 5%;
+            padding: 10%;
+            width: 45%;
+            outline:none;
+        }   
+        #btnCheckIn{
+            background-color:#002060;
+            border-radius: 100%;
+            border: none;
+            width: 50%;
+            padding: 10%;
+            color: #FFFFFF;
+            margin-top: 25%;
+            box-shadow: 0 2% 10% -3% #719BE6;
+            display: block;
+            margin: 55% auto 10% auto;
+        }
+              /* template registro */
+        #conteinerWall{
+            background-color: #F3F3F3;;
+            
+        }
+        #contendorBaseRegistro{  
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        
+        }
+        h2{
+        position: absolute;
+        width: 254.09px;
+        height: 9.87px;
+        left: 51.12px;
+        top: 563px;
+        font-family:'Caveat Brush', cursive;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 15px;
+        line-height: 140.62%;
+        /* or 17px */
+        
+        text-align: center;
+        
+        color: rgba(52, 109, 120, 0.6);
+        
+        transform: rotate(0.7deg);
+        }
+        h3{
+            font-family:'Caveat Brush', cursive;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 15px;  
+            text-align: center;
+            color: rgba(52, 109, 120, 0.6);
+        
+        }

@@ -33,6 +33,18 @@ export const loginExistente = () => {
   });
 }
 
+export const mostrarContrasenaLogin = () => {
+  const eyeOpen = document.querySelector('#eyeOpen');
+  const passwordLogin = document.querySelector('#passwordLogin');
+  
+  if(passwordLogin.type == "password"){
+      passwordLogin.type ="text";
+      eyeOpen.src = "images/eyes.png";
+  }else {
+    passwordLogin.type ="password";
+    eyeOpen.src = "images/eyelashes.png";
+  }
+}
 
 export const registrarme = () => {
   const email = document.querySelector('#email').value;    
@@ -51,25 +63,39 @@ export const registrarme = () => {
     // Email sent.
     alert('Te hemos enviado un correo. Validalo')
     console.log('Enviendo correo...');
+
   }).catch(function(error) {
     // An error happened.
     console.log('error');
   });
-  /*if (user.user.emailVerified === true){
-   
-    window.location.href = '#/bienvenida';
+
+  if (user.user.emailVerified === true){
+   alert('Este usuario ya existe')
+   //window.location.href = '#/recuperarContrasena';
   }else {
-    alert('Aun no confirmas el link en tu correo');
-  }*/
+  window.location.href = '#/recuperarContrasena';
+    // hacer tamplate de Recuperarcontrasena;
+  }
+ 
   })
   .catch((error) => {
     var errorCode = error.code;
     var errorMessage = error.message;
-    // ..
-    
+    // ..  
   });
-  
+}
 
+export const mostrarContrasenaRegistro = () => {
+  const eyeOpen = document.querySelector('#eyeOpen');
+  const contrasena = document.querySelector('#contrasena');
+  
+  if(contrasena.type == "password"){
+      contrasena.type ="text";
+      eyeOpen.src = "images/eyes.png";
+  }else {
+    contrasena.type ="password";
+    eyeOpen.src = "images/eyelashes.png";
+  }
 }
 
 export const loginGoo = () => {
