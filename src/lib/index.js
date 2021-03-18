@@ -84,7 +84,7 @@ export const registrarme = () => {
   });
 }
 export const mostrarContrasenaRegistro = () => {
-  const eyeOpen = document.querySelector('#eyeOpen');
+  const eyeOpen = document.querySelector('#eyeOpenRegister');
   const contrasena = document.querySelector('#contrasena');
   
   if(contrasena.type == "password"){
