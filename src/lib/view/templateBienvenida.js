@@ -1,12 +1,24 @@
 import { registrarme } from '../index.js';
 import { validar } from '../index.js';
+import { salir } from '../index.js';
 import { observador } from '../index.js';
 
 export const bienvenida = () => {
   const divBienvenida = document.createElement('div');
   const viewBienvenida = ` 
-    <div id="containerBaseBienvenida" class="containerBase">
+    <div id="containerBaseBienvenida" class="containerBaseBienvenida">
       <header class="header">
+        <div class="configuration">
+        <input type="checkbox" id="active">
+        <label for="active" class="menu-btn"> 
+        <i class="fas fa-bars">
+        </i></label>
+        <div class="closed">
+          <ul>
+            <li><a href="#/editarPerfil">Editar Perfil</a></li>
+            <li><a id="cerrarSesion" class="cerrarSesion">Cerrar Sesion</a></li>
+        </div>
+        </div>
         <div class="logoNavContainer">
           <img src="images/Rectangle.png" id="logoWelcome" class="logoWelcome">
           <input placeholder="Buscar" id="search">
@@ -26,9 +38,14 @@ export const bienvenida = () => {
       <h1>Bienvenidos a nuestra APP </h1>
     </div>
     `;
- 
+
   divBienvenida.innerHTML = viewBienvenida;
 
+  const cerrarSesion = divBienvenida.querySelector('#cerrarSesion');
+  cerrarSesion.addEventListener('click', () => {
+    salir();
+  });
 
+  observador();
   return divBienvenida;
 }

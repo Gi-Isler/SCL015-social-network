@@ -180,7 +180,6 @@ h2{
     background-color:#F3F3F3;
     border-color:white;
 }
-
 .logoNavContainer{
     display: flex;
     justify-content: space-between;
@@ -202,5 +201,34 @@ ul li {
 }
 ul li a{
     display: block;
-    padding: 0.5rem 1rem;
+    padding: 0.5rem 2rem;
 }
+/* --------------------templateEditarPerfil---------------*/
+.containerBaseEditarPerfil{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    padding:30%;
+    margin:3%;
+    background-color:#F3F3F3;
+    border-color:white;
+    width:2%;
+    height:2%;
+}
+.menu-btn{
+    position: absolute;
+    z-index: 2;
+    right: 20px;
+    /* left: 20px; */
+    top: 20px;
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 50%;
+    font-size: 20px;
+    color: #fff;
+    cursor: pointer;
+}
+

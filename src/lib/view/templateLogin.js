@@ -20,26 +20,27 @@ export const login = () => {
     `;
   divLogin.innerHTML = viewLogin;
 
- const abrirOjo = divLogin.querySelector('#eyeOpen');
+  const abrirOjo = divLogin.querySelector('#eyeOpen');
   abrirOjo.addEventListener('click', () => {
-    mostrarContrasenaLogin()
-  })
+    mostrarContrasenaLogin();
+  });
 
   const userApp = divLogin.querySelector('#btnEnter');
   userApp.addEventListener('click', () => {
-    loginExistente()
-  })
+    loginExistente();
+  });
 
   const btnGoogle = divLogin.querySelector('#botonGoogle');
   btnGoogle.addEventListener('click', () => {
-    loginGoo()
-  })
+    loginGoo();
+    console.log(loginGoo);
+  });
+
   const restroForm = divLogin.querySelector('#btnCheckIn');
   restroForm.addEventListener('click', () => {
     window.location.href = '#/registro';
-  })
+  });
 
-  observador()
+  observador();
   return divLogin;
-};
-
+}

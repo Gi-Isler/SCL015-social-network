@@ -1,10 +1,9 @@
-import { login } from '../lib/view/templateLogin.js';
-import { registro } from '../lib/view/templateRegistro.js';
+import { login } from './view/templateLogin.js';
+import { registro } from './view/templateRegistro.js';
 import { recuperarContrasena } from './view/templateRecuperarContrasena.js';
-//import { escribeNuevaContraseña } from '../lib/view/templateEscribeNuevaContraseña.js';
-import { bienvenida } from '../lib/view/templateBienvenida.js';
-//import { editarPerfil } from '../lib/view/templateEditarPerfil.js';
-
+// import { escribeNuevaContraseña } from './view/templateEscribeNuevaContraseña.js';
+import { bienvenida } from './view/templateBienvenida.js';
+import { editarPerfil } from './view/templateEditarPerfil.js';
 
 const showTemplate = (hash) => {
   const containerRoot = document.getElementById('root');
@@ -16,7 +15,7 @@ const showTemplate = (hash) => {
     case '#/':
       containerRoot.appendChild(login());
       break;
-      case '#/login':
+    case '#/login':
       containerRoot.appendChild(login());
       break;
     case '#/registro':
@@ -25,27 +24,30 @@ const showTemplate = (hash) => {
     case '#/bienvenida':
       containerRoot.appendChild(bienvenida());
       break;
-      case '#/recuperarContrasena':
+    case '#/recuperarContrasena':
       containerRoot.appendChild(recuperarContrasena());
       break;
+    case '#/editarPerfil':
+      containerRoot.appendChild(editarPerfil());
+      break;
     default:
-      containerRoot.innerHTML =`<h1>Pagina no existe</h1>`
-      
+      containerRoot.innerHTML = '<h1>Pagina no existe</h1>';
   }
-}
-
+};
 
 export const changeRoute = (hash) => {
-  if (hash === '#/'){
-    return showTemplate (hash)
-  } else if ( hash === '#/login'){
-    return showTemplate (hash)
+  if (hash === '#/') {
+      return showTemplate (hash)
+  }   else if ( hash === '#/login'){
+       return showTemplate (hash)
   } else if ( hash === '#/registro'){
     return showTemplate (hash)
   } else if ( hash === '#/bienvenida'){
     return showTemplate (hash)
   } else if ( hash === '#/recuperarContrasena'){
     return showTemplate (hash)
+  } else if ( hash === '#/editarPerfil'){
+    return showTemplate (hash)  
   } else {
     return showTemplate (hash) 
   }

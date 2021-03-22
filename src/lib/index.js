@@ -31,7 +31,7 @@ export const loginExistente = () => {
     console.log('No existe usuario');
     alert('Verifica tus datos')
   });
-}
+};
 
 export const mostrarContrasenaLogin = () => {
   const eyeOpen = document.querySelector('#eyeOpen');
@@ -44,7 +44,7 @@ export const mostrarContrasenaLogin = () => {
     passwordLogin.type ="password";
     eyeOpen.src = "images/eyelashes.png";
   }
-}
+};
 
 export const registrarme = () => {
   const email = document.querySelector('#email').value;    
@@ -62,7 +62,7 @@ export const registrarme = () => {
     .then(function() {
     // Email sent.
       alert('Te hemos enviado un correo. Validalo')
-      console.log('Enviendo correo...');
+      console.log('Enviando correo...');
 
     }).catch(function(pepita) {
     // An error happened.
@@ -82,7 +82,7 @@ export const registrarme = () => {
     }
     
   });
-}
+};
 export const mostrarContrasenaRegistro = () => {
   const eyeOpen = document.querySelector('#eyeOpenRegister');
   const contrasena = document.querySelector('#contrasena');
@@ -94,7 +94,7 @@ export const mostrarContrasenaRegistro = () => {
     contrasena.type ="password";
     eyeOpen.src = "images/eyelashes.png";
   }
-}
+};
 
 export const loginGoo = () => {
   //Muestra de codigo de firebase:
@@ -123,7 +123,7 @@ export const loginGoo = () => {
     
     // ...
   });
-}
+};
 //observador que autentica la info codigo de firebase
 export const observador = () => {
 //Muestra de codigo de firebase:
@@ -151,7 +151,7 @@ export const observador = () => {
       // ...
     }
   });
-}
+};
 export const validar = () => {
 
 //Muestra de codigo de firebase:
@@ -160,9 +160,22 @@ export const validar = () => {
 user.sendEmailVerification().then(function() {
   // Email sent.
   alert('Te hemos enviado un correo. Validalo')
-  console.log('Enviendo correo...');
+  console.log('Enviando correo...');
 }).catch(function(error) {
   // An error happened.
   console.log('error');
 });'*/
-}
+};
+
+export const salir = () => {
+  firebase.auth().signOut()
+  .then(function(){
+    // console.log('Saliendo...')
+   alert("has cerrado sesion")
+   window.location.href='#/login'; 
+  })
+  .catch(function(error){
+    //  console.log(error)
+    alert("Aun no has cerrado sesion")
+  })
+};

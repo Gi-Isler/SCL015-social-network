@@ -3,6 +3,7 @@ import { registrarme } from '../index.js';
 import { validar } from '../index.js';
 import { mostrarContrasenaRegistro } from '../index.js'
 import { observador } from '../index.js';
+
 export const registro = () => {
   const divRegistro = document.createElement('div');
   const viewRegistro = ` 
@@ -21,21 +22,21 @@ export const registro = () => {
     `;
 
   divRegistro.innerHTML = viewRegistro;
-  
+
   const btnGoogle = divRegistro.querySelector('#botonGoogle');
   btnGoogle.addEventListener('click', () => {
-   loginGoo() 
-  })
+    loginGoo();
+  });
+
   const abrirOjoRegistro = divRegistro.querySelector('#eyeOpenRegister');
   abrirOjoRegistro.addEventListener('click', () => {
-    mostrarContrasenaRegistro()
-  })
+    mostrarContrasenaRegistro();
+  });
   const loginRegistro = divRegistro.querySelector('#btnRegister');
   loginRegistro.addEventListener('click', () => {
     registrarme(), validar()
-  
-  })
-  // observador()
+  });
 
+  // observador()
   return divRegistro;
 }
