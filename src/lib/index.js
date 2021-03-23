@@ -179,3 +179,23 @@ export const salir = () => {
     alert("Aun no has cerrado sesion")
   })
 };
+export const agregarDatos = () => {
+  var db = firebase.firestore();
+  let name = document.getElementById('name').value;
+  let mensaje = document.getElementById('mensaje').value;
+  //Agrgar documentos
+   db.collection("mensajeMuro").add({
+   first: name,
+   Text: mensaje,
+   
+   })
+   .then((docRef) => {
+   console.log("Document written with ID: ", docRef.id);
+   let name = document.getElementById('name').value = '';
+   let mensaje = document.getElementById('mensaje').value = '';
+
+   })
+   .catch((error) => {
+   console.error("Error adding document: ", error);
+   });
+}

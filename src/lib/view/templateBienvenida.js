@@ -2,6 +2,7 @@ import { registrarme } from '../index.js';
 import { validar } from '../index.js';
 import { salir } from '../index.js';
 import { observador } from '../index.js';
+import { agregarDatos } from '../index.js';
 
 export const bienvenida = () => {
   const divBienvenida = document.createElement('div');
@@ -32,7 +33,12 @@ export const bienvenida = () => {
           </nav>        
        </div>
       </header>
-
+      <div>
+      <input id="name" type="name" placeholder="Nombre de usuario"class="form">
+      <input type="text" id="mensaje"  placeholder="Publicar mensaje...">
+      <button id="agregar" class="agregar">Publicar</button>
+      </div>  
+      <div>
   
 
       <h1>Bienvenidos a nuestra APP </h1>
@@ -45,6 +51,11 @@ export const bienvenida = () => {
   cerrarSesion.addEventListener('click', () => {
     salir();
   });
+
+  const coleccion = divBienvenida.querySelector('#agregar')
+  coleccion.addEventListener('click' , () => {
+    agregarDatos()
+  })
 
   observador();
   return divBienvenida;
