@@ -9,7 +9,7 @@ export const registro = () => {
   const viewRegistro = ` 
     <div id="contendorBaseRegistro" class="containerBaseRegistro">
       <img id="inputImgLogo" src="images/logo.png" class="img">
-      <img id="botonGoogle" class="botonGoogle" src="images/initGoo.png" type="button">
+      <img id="botonGoogle" class="initGooR" src="images/initGooR.png" type="button">
       <input id="email" type="email" class="form" placeholder="Ingesa email">
       <input id="name" type="name" placeholder="Nombre de usuario"class="form">
       <input id="inputCalendario" type="date"class="form">
