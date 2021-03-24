@@ -11,16 +11,16 @@ export const bienvenida = () => {
       <header class="header">
         <div class="configuration">
         <input type="checkbox" id="active">
-        <label for="active" class="menu-btn"> 
-        <i class="fas fa-bars">
-        </i></label>
-        <div class="closed">
+        <label for="active" class="menu-btn"><i class="fas fa-bars"></i></label>
+        <div class="wrapper">
           <ul>
-            <li><a href="#/editarPerfil">Editar Perfil</a></li>
-            <li><a id="cerrarSesion" class="cerrarSesion">Cerrar Sesion</a></li>
-          </ul>
-        </div>
+    <li><a href="#editarPerfil">Editar perfil</a></li>
+    <li><a href="#recuperarContrasena">Recuperar contraseña</a></li>
+    <li><a id="cerrarSesion" class="cerrarSesion">Cerrar sesion</a></li>
     
+    </ul>
+    </div>
+        </div>
         <div class="logoNavContainer">
           <img src="images/Rectangle.png" id="logoWelcome" class="logoWelcome">
           <input placeholder="Buscar" id="search">
@@ -91,6 +91,7 @@ const contenedorMsmMuro = document.getElementById('contenedorMsmMuro');
   querySnapshot.forEach((doc) => {
       console.log(`${doc.id} => ${doc.data()}`);
       contenedorMsmMuro.innerHTML += `
+
     <div class="box">
      <h1>${doc.data().Option}</h1>
      <h3>${doc.data().Text}</h3>

@@ -169,25 +169,138 @@ h2{
     display: block;
     margin: 37px auto 10px auto; 
 }
+
 /*---------------template Bienvenida---------------- */
 .containerBaseBienvenida{
-    position: absolute;
+    /*position: absolute;
     display: flex;
-    flex-direction: row;
-    justify-content: space-around; 
+     
     padding:30%;
-    margin:3%;
-    background-color:#F3F3F3;
-    border-color:white;
+    margin:3%;*/
+    background-color:#ffffff;
+    
 }
 #logoNavContainer{
     display: flex;
-    justify-content: row;
-    flex-wrap: wrap-reverse;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
     align-items: flex-end;
-    
+    justify-content: space-between;
+    margin-top: 2%;
+    position: fixed;
+    padding: 3%;
     
 }
+/*#home{
+
+}
+#group{
+
+}
+#maps{
+
+}
+#msn{
+
+}*/
+.wrapper{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgb(255, 255, 255);
+    clip-path: circle(25px at calc(100% - 45px) 45px);
+    transition: all 0.3s ease-in-out;
+}
+  #active:checked ~ .wrapper{
+    clip-path: circle(75%);
+  }
+  .menu-btn{
+    position: absolute;
+    z-index: 2;
+    right: 20px;
+    /*left: 20px; */
+    top: 20px;
+    height: 50px;
+    width: 50px;
+    text-align:right;
+    line-height: 50px;
+    border-radius: 50%;
+    font-size: 20px;
+    color: #fff;
+    cursor: pointer;
+    background: #000;
+    transition: all 0.3s ease-in-out;
+  }
+  #active:checked ~ .menu-btn{
+    color: #fff;
+  }
+  #active:checked ~ .menu-btn i:before{
+    content: "\f00d";
+  }
+  .wrapper ul{
+    position: absolute;
+    top: 150px;
+    left: 70%;
+    transform: translate(-50%, -50%);
+    list-style: none;
+    text-align: right;
+  }
+  .wrapper ul li{
+    margin: 10px 0;
+  }
+  .wrapper ul li a{
+    color: none;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+    padding: 10px 20px;
+    color: #fff;
+    border-radius: 50px;
+    background: #000;
+    position: relative;
+    line-height: 50px;
+    transition: all 0.3s ease;
+  }
+  .wrapper ul li a:after{
+    position: absolute;
+    content: "";
+    background: rgb(255, 255, 255);
+     background: linear-gradient(#14ffe9, #ffeb3b, #ff00e0);
+    /*background: linear-gradient(375deg, #1cc7d0, #2ede98);*/
+    width: 104%;
+    height: 110%;
+    left: -2%;
+    top: -5%; /* if the font is 'Oswald'*/
+    border-radius: 50px;
+    transform: scaleY(0);
+    z-index: -1;
+    animation: rotate 1.5s linear infinite;
+    transition: transform 0.3s ease;
+  }
+  .wrapper ul li a:hover:after{
+    transform: scaleY(1);
+  }
+  .wrapper ul li a:hover{
+    color: #fff;
+  }
+  input[type="checkbox"]{
+    display: none;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
 .search{
     border-radius: 20%;
 } 
@@ -211,46 +324,80 @@ ul li a{
     justify-content: center; 
     padding:30%;
     margin:3%;
-    background-color:#F3F3F3;
+    background-color: #F3F3F3;
+    
     border-color:white;
     width:2%;
     height:2%;
-}
-.menu-btn{
-    position: absolute;
-    z-index: 2;
-    right: 20px;
-    /* left: 20px; */
-    top: 20px;
-    height: 50px;
-    width: 50px;
-    text-align: center;
-    line-height: 50px;
-    border-radius: 50%;
-    font-size: 20px;
-    color: #fff;
-    cursor: pointer;
 }
 
 #contenedorMsmMuro{
     position: absolute;
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center; 
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    background-color: #f3f3f3;
+    width: 100%;
+    height: auto;
+    margin: 5px 0px;
+    padding: 15px;
+    border-radius: 20px;
+
     
 }
-#contenedorMsmMuro, .menuTitulo{
-    align-items: flex-start;
-    margin-left: 1%;
-    height: 32px;
+
+#menuTitulo{
+    margin: 5px;
+    padding: 5px;
+    width: 150px;
+    height: 30px;
+    border-radius: 100px;
+    background: rgba(52, 109, 120, 0.3);
+    font-family: Calibri;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 140.62%;
+    color: rgba(0, 0, 0, 0.44);
+
+}
+
+#mensaje{
+    margin: 5px;
+    padding: 5px;
     width: 90%;
-    font-weight: lighter;
+    height: auto;
+    border-radius: 100px;
+    background: rgba(52, 109, 120, 0.3);
+    font-family: Calibri;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 140.62%;
+    color: rgba(0, 0, 0, 0.44);
 }
+#agregar{
+    margin: 5px;
+    padding: 5px;
+    width: 80px;
+    height: auto;
+    background-color: #002060;
+    color: #c4c4c4;
+    border-radius: 100px;
+}
+
 .box{
+    position: absolute;
     display: flex;
-    flex-direction: column-reverse;
-    align-content: center;
-    background: #F3F3F3;
-    border-radius: 10px;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    background-color: #f3f3f3;
+    width: 100%;
+    height: auto;
+    margin: 5px 0px;
+    padding: 15px;
+    border-radius: 20px;
 }
+
