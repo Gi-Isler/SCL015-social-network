@@ -1,5 +1,6 @@
 import { registrarme } from '../index.js';
 import { validar } from '../index.js';
+//import { menuEditar } from '../index.js';
 import { salir } from '../index.js';
 import { observador } from '../index.js';
 
@@ -9,18 +10,19 @@ export const bienvenida = () => {
   const viewBienvenida = ` 
     <div id="containerBaseBienvenida" class="containerBaseBienvenida">
       <header class="header">
-        <div class="configuration">
-        <input type="checkbox" id="active">
-        <label for="active" class="menu-btn"><i class="fas fa-bars"></i></label>
-        <div class="wrapper">
-          <ul>
-    <li><a href="#editarPerfil">Editar perfil</a></li>
-    <li><a href="#recuperarContrasena">Recuperar contraseña</a></li>
-    <li><a id="cerrarSesion" class="cerrarSesion">Cerrar sesion</a></li>
-    
-    </ul>
-    </div>
-        </div>
+      <div class="configuration">
+        <input type="checkbox" id="check">
+        <label for="check" class="icon-menu">Menu</label>
+        <nav class="menu">
+          <lu>
+          <li><a href='#/editarPerfil' class="editar">Editar perfil</a></li>
+          <li><a href='#/recuperarContrasena' class="recuperar">Recuperar contraseña</a></li>
+          <li><a id="cerrarSesion" class="cerrarSesion">Cerrar sesion</a></li>
+
+          </lu>
+
+        </nav>
+      </div>
         <div class="logoNavContainer">
           <img src="images/Rectangle.png" id="logoWelcome" class="logoWelcome">
           <input placeholder="Buscar" id="search">
@@ -54,6 +56,11 @@ export const bienvenida = () => {
     `;
 
   divBienvenida.innerHTML = viewBienvenida;
+
+  /*const btnMenuEdi = divBienvenida.querySelector('#btnConf');
+  btnMenuEdi.addEventListener('click', () => {
+  menuEditar();
+  });*/
 
   const cerrarSesion = divBienvenida.querySelector('#cerrarSesion');
   cerrarSesion.addEventListener('click', () => {

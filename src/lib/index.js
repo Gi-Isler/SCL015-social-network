@@ -166,6 +166,15 @@ user.sendEmailVerification().then(function() {
   console.log('error');
 });'*/
 };
+/*export const menuEditar = () => {
+  const btnConf = document.querySelector('#btnConf');
+  console.log('Esta funcionando el botn configuracion')
+  const ancla = document.getElementsByClassName('nav-enlace')
+  for (let i = 0; i < ancla.length; i++) {
+    ancla[i].classList.toggle('desaparece');
+    
+  }
+}*/
 
 export const salir = () => {
   firebase.auth().signOut()
