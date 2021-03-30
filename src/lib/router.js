@@ -4,6 +4,7 @@ import { recuperarContrasena } from './view/templateRecuperarContrasena.js';
 // import { escribeNuevaContraseña } from './view/templateEscribeNuevaContraseña.js';
 import { bienvenida } from './view/templateBienvenida.js';
 import { editarPerfil } from './view/templateEditarPerfil.js';
+import { post } from './view/templatePost.js';
 
 const showTemplate = (hash) => {
   const containerRoot = document.getElementById('root');
@@ -23,6 +24,7 @@ const showTemplate = (hash) => {
       break;
     case '#/bienvenida':
       containerRoot.appendChild(bienvenida());
+      containerRoot.appendChild(post());
       break;
     case '#/recuperarContrasena':
       containerRoot.appendChild(recuperarContrasena());

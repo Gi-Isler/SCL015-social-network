@@ -339,7 +339,7 @@ label{
     border-radius: 100px;
 }
 
-.boxMuro{
+.postMuro{
     /* position: relative; */
     /* display: flex; */
     flex-direction: column-reverse;
