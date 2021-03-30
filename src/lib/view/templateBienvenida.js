@@ -15,29 +15,27 @@ export const bienvenida = () => {
         <label for="check" class="icon-menu">Menu</label>
         <nav class="menu">
           <lu>
-          <li><a href='#/editarPerfil' class="editar">Editar perfil</a></li>
-          <li><a href='#/recuperarContrasena' class="recuperar">Recuperar contraseña</a></li>
-          <li><a id="cerrarSesion" class="cerrarSesion">Cerrar sesion</a></li>
-
+            <li><a href='#/editarPerfil' class="editar">Editar perfil</a></li>
+            <li><a href='#/recuperarContrasena' class="recuperar">Recuperar contraseña</a></li>
+            <li><a id="cerrarSesion" class="cerrarSesion">Cerrar sesion</a></li>
           </lu>
-
         </nav>
       </div>
-        <div class="logoNavContainer">
-          <img src="images/Rectangle.png" id="logoWelcome" class="logoWelcome">
-          <input placeholder="Buscar" id="search">
-          <nav class="navigation">
-            <ul>
-              <li><a href="#"><img id="home" src="images/home.png" type="button"></a></li>
-              <li><a href="#"><img id="group" src="images/account_group.png" type="button"></a></li>
-              <li><a href="#"><img id="maps" src="images/google_maps.png" type="button"></a></li>
-              <li><a href="#"><img id="msn" src="images/carta mensaje 1.png" type="button"></a></li>
-            </ul>    
-          </nav>        
-        </div>
+      <div class="logoNavContainer">
+        <img src="images/Rectangle.png" id="logoWelcome" class="logoWelcome">
+        <input placeholder="Buscar" id="search">
+      </div>
+      <div id="navigation">
+        <nav class="navigation">
+          <ul>
+            <li><a href="#/bienvenida"><img id="home" src="images/home.png" type="button"></a></li>
+            <li><a href="#"><img id="group" src="images/account_group.png" type="button"></a></li>
+            <li><a href="#"><img id="maps" src="images/google_maps.png" type="button"></a></li>
+            <li><a href="#"><img id="msn" src="images/carta mensaje 1.png" type="button"></a></li>
+          </ul>    
+        </nav>
+      </div>          
       </header>
-    
-   
       <div id="contenedorMsmMuro">
         <select typo="option"name="Selecciona tu Titulo" id="menuTitulo">
             <option>Elige tu opción</option>
@@ -49,7 +47,11 @@ export const bienvenida = () => {
             <option>Conversatorio</option>
       </select>
             <input type="text" id="mensaje"  placeholder="Publicar mensaje..." form-mothod = "post">
-            <button id="agregar" class="agregar">Publicar</button>   
+            <button id="agregar" class="agregar">Publicar</button>
+
+          <div id="postMuro">
+
+           </div>  
       </div> 
   </div>
   
@@ -86,24 +88,21 @@ export const bienvenida = () => {
       document.getElementById('mensaje').value = '';
       })
       .catch((error) => {
-      console.error("Error adding document: ", error);
-      });
+      //console.error("Error adding document: ", error);
+    });
     
-
-  /*const imprimirPublicacion = mensaje;
-  document.getElementById('mensajePublicado').innerHTML = imprimirPublicacion;*/
 const contenedorMsmMuro = document.getElementById('contenedorMsmMuro');
- db.collection("mensajeMuro").get().then((querySnapshot) => {
-  contenedorMsmMuro.innerHTML = '';
+ db.collection("mensajeMuro").onSnapshot((querySnapshot) => {
+  //contenedorMsmMuro.innerHTML = '';
   querySnapshot.forEach((doc) => {
       console.log(`${doc.id} => ${doc.data()}`);
       contenedorMsmMuro.innerHTML += `
 
-    <div class="box">
-     <h1>${doc.data().Option}</h1>
-     <h3>${doc.data().Text}</h3>
-     
+    <div id="boxMuro">
+      <h1>${doc.data().Option}</h1>
+      <h3>${doc.data().Text}</h3>
     </div>
+    
       `
   });
 });
