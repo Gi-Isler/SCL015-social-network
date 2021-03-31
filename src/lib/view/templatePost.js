@@ -11,9 +11,19 @@ const contenedorMsmMuro = document.getElementById('postMuro');
         console.log(`${doc.id} => ${doc.data().Option}`);
 
             contenedorMsmMuro.innerHTML += `
-                <div id="boxMuro">  
+                <div id="boxMuro" class="boxMuro">  
                     <h1>${doc.data().Option}</h1>
                     <h3>${doc.data().Text}</h3>
+                    <div class="configuration">
+                    <input type="checkbox" id="check">
+                    <label for="check" class="icon-menu">Menu</label>
+                    <nav class="menu">
+                        <lu>
+                            <li>Editar</li>
+                            <li>Eliminar</li>
+                        </lu>
+                    </nav>
+                </div>
 
 
                 </div>
@@ -21,5 +31,13 @@ const contenedorMsmMuro = document.getElementById('postMuro');
       `
         });
     });
+
+    db.collection("mensajeMuro").doc("DC").delete().then(() => {
+        console.log("Document successfully deleted!");
+    }).catch((error) => {
+        console.error("Error removing document: ", error);
+    });
+
+
     return contenedorMsmMuro;
 }

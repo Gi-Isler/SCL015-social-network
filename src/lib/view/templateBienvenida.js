@@ -17,7 +17,7 @@ export const bienvenida = () => {
         <nav class="menu">
           <lu>
             <li><a href='#/editarPerfil' class="editar">Editar perfil</a></li>
-            <li><a href='#/recuperarContrasena' class="recuperar">Recuperar contraseña</a></li>
+            <li><a href='#/escribeNuevaContrasena' class="recuperar">Editar contraseña</a></li>
             <li><a id="cerrarSesion" class="cerrarSesion">Cerrar sesion</a></li>
           </lu>
         </nav>
@@ -52,7 +52,7 @@ export const bienvenida = () => {
             <button id="agregar" class="agregar">Publicar</button>
       </div> 
 
-          <div id="postMuro">
+          <div id="postMuro" class="postMuro">
 
           </div>  
       
@@ -97,10 +97,7 @@ export const bienvenida = () => {
     });
 } 
 const pintarDatos = () => {
-
 }
-
-
   observador();
   window.addEventListener('load',() => {
     console.log("entramos al post")
