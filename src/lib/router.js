@@ -4,6 +4,7 @@ import { recuperarContrasena } from './view/templateRecuperarContrasena.js';
 // import { escribeNuevaContraseña } from './view/templateEscribeNuevaContraseña.js';
 import { bienvenida } from './view/templateBienvenida.js';
 import { editarPerfil } from './view/templateEditarPerfil.js';
+import { escribeNuevaContrasena } from './view/templateEscribeNuevaContrasena.js';
 import { post } from './view/templatePost.js';
 
 const showTemplate = (hash) => {
@@ -29,6 +30,9 @@ const showTemplate = (hash) => {
     case '#/recuperarContrasena':
       containerRoot.appendChild(recuperarContrasena());
       break;
+    case '#/escribeNuevaContrasena':
+      containerRoot.appendChild(escribeNuevaContrasena());
+      break;
     case '#/editarPerfil':
       containerRoot.appendChild(editarPerfil());
       break;
@@ -48,6 +52,8 @@ export const changeRoute = (hash) => {
     return showTemplate (hash)
   } else if ( hash === '#/recuperarContrasena'){
     return showTemplate (hash)
+  } else if ( hash === '#/escribeNuevaContrasena'){
+      return showTemplate (hash) 
   } else if ( hash === '#/editarPerfil'){
     return showTemplate (hash)  
   } else {
