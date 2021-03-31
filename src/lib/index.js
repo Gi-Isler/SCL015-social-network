@@ -156,7 +156,6 @@ export const validar = () => {
 
 //Muestra de codigo de firebase:
 /*var user = firebase.auth().currentUser;
-
 user.sendEmailVerification().then(function() {
   // Email sent.
   alert('Te hemos enviado un correo. Validalo')
@@ -179,4 +178,6 @@ export const salir = () => {
     alert("Aun no has cerrado sesion")
   })
 };
+
+
 
