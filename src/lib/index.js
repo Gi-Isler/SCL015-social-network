@@ -33,16 +33,16 @@ export const loginExistente = () => {
   });
 };
 
-export const mostrarContrasenaLogin = () => {
-  const eyeOpen = document.querySelector('#eyeOpen');
-  const passwordLogin = document.querySelector('#passwordLogin');
+export const mostrarContrasenaLogin = (elemento, passwordLogin) => {
+  //const eyeOpen = document.querySelector('#eyeOpen');
+  //const passwordLogin = document.querySelector('#passwordLogin');
   
   if(passwordLogin.type == "password"){
       passwordLogin.type ="text";
-      eyeOpen.src = "images/eyes.png";
+    elemento.src = "images/eyes.png";
   }else {
     passwordLogin.type ="password";
-    eyeOpen.src = "images/eyelashes.png";
+    elemento.src = "images/eyelashes.png";
   }
 };
 

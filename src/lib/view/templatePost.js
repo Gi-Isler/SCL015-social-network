@@ -6,7 +6,7 @@ export const post = () => {
 
 const contenedorMsmMuro = document.getElementById('postMuro');
     db.collection("mensajeMuro").onSnapshot((querySnapshot) => {
-  //contenedorMsmMuro.innerHTML = '';
+  contenedorMsmMuro.innerHTML = '';
         querySnapshot.forEach((doc) => {
         console.log(`${doc.id} => ${doc.data().Option}`);
 
@@ -14,10 +14,12 @@ const contenedorMsmMuro = document.getElementById('postMuro');
                 <div id="boxMuro" class="boxMuro">  
                     <h1>${doc.data().Option}</h1>
                     <h3>${doc.data().Text}</h3>
-                    <div class="configuration">
-                    <input type="checkbox" id="check">
-                    <label for="check" class="icon-menu">Menu</label>
-                    <nav class="menu">
+
+
+                    <div class="configurationBox">
+                    <input type="checkbox" id="check2">
+                    <label for="check" class="icon-menu2">Menu</label>
+                    <nav class="menu2">
                         <lu>
                             <li>Editar</li>
                             <li>Eliminar</li>

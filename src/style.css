@@ -233,7 +233,7 @@ text-decoration: none;
 color: black;
 }
 
-label{
+.icon-menu{
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
@@ -357,6 +357,14 @@ label{
     padding: 2vh;
     border-radius: 5%;
 }
+
+.icon-menu2{
+    
+    background-image: url(./images/menuPuntos.png);
+    background-repeat: no-repeat;
+}
+
+
 .containerBaseEditarPerfil, .containerBaseRegistro{
     position: absolute;
     display: flex;

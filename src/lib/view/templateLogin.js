@@ -21,8 +21,9 @@ export const login = () => {
   divLogin.innerHTML = viewLogin;
 
   const abrirOjo = divLogin.querySelector('#eyeOpen');
+  const passwordLogin = divLogin.querySelector('#passwordLogin')
   abrirOjo.addEventListener('click', () => {
-    mostrarContrasenaLogin();
+    mostrarContrasenaLogin(abrirOjo, passwordLogin);
   });
 
   const userApp = divLogin.querySelector('#btnEnter');
