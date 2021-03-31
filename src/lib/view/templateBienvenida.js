@@ -38,6 +38,7 @@ export const bienvenida = () => {
       </div>          
       </header>
       <div id="contenedorMsmMuro">
+      
         <select type="option"name="Selecciona tu Titulo" id="menuTitulo">
             <option>Elige tu opción</option>
             <option>Taller</option>
@@ -50,9 +51,7 @@ export const bienvenida = () => {
             <input type="text" id="mensaje"  placeholder="Publicar mensaje..." form-mothod = "post">
             <button id="agregar" class="agregar">Publicar</button>
       </div> 
-
           <div id="postMuro" class="postMuro">
-
           </div>  
       
   </div>
