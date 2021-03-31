@@ -38,7 +38,6 @@ export const bienvenida = () => {
       </div>          
       </header>
       <div id="contenedorMsmMuro">
-        <input type="text" id="id"placeholder="ID">
         <select type="option"name="Selecciona tu Titulo" id="menuTitulo">
             <option>Elige tu opción</option>
             <option>Taller</option>
