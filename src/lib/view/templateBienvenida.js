@@ -50,6 +50,7 @@ export const bienvenida = () => {
         </select>
             <input type="text" id="mensaje"  placeholder="Publicar mensaje..." form-mothod = "post">
             <button id="agregar" class="agregar">Publicar</button>
+            <button id="editar" class="agregar">Guardar</button>
       </div> 
           <div id="postMuro" class="postMuro">
           </div>  
@@ -75,12 +76,12 @@ export const bienvenida = () => {
   })
   const agregarDatos = () => {
       
-      const id = document.getElementById('id').value;
+      //const id = document.getElementById('id').value;
       const menuTitulo = document.getElementById('menuTitulo').value;
       const mensaje = document.getElementById('mensaje').value;
       //Agrgar documentos
       db.collection("mensajeMuro").add({
-      Text: id,
+      
       Option: menuTitulo,
       Text: mensaje,
       })
@@ -94,8 +95,7 @@ export const bienvenida = () => {
       //console.error("Error adding document: ", error);
     });
 } 
-const pintarDatos = () => {
-}
+//const pintarDatos = () => {}
   observador();
   window.addEventListener('load',() => {
     console.log("entramos al post")

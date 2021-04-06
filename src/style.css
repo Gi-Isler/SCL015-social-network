@@ -238,7 +238,7 @@ color: black;
     flex-direction: row;
     justify-content: flex-end;
     position: fixed;
-    margin-left: 86%;
+    margin-left: 80%;
     width: 100%;
     max-width: 1000px;
     top: 16px;
@@ -363,7 +363,6 @@ color: black;
     background-image: url(./images/menuPuntos.png);
     background-repeat: no-repeat;
 }
-
 
 .containerBaseEditarPerfil, .containerBaseRegistro{
     position: absolute;
