@@ -2,7 +2,7 @@
 APP para  móviles (pantalla 360 x 640)
 
 
-Historias de Usuarios
+## Historias de Usuarios
 
 1.- Inicio de sesión y Registro "Yo como usuario debo Crear cuenta de acceso y autenticación con cuenta de correo y contraseña, y también con una cuenta de Google". 
 Por lo que es importante tomar estas consideraciones:
@@ -18,7 +18,7 @@ Por lo que es importante tomar estas consideraciones:
 
 
 
-En nombre de esta red social es "PAS TIME", esta app está dirigida para aquellas personas que realizan actividades recreativas, educativas y culturales de bajo costo en ambientes de espacios libres, por lo que necesitan expandir sus conocimientos entregándoselos a personas con alto interés en sus clases, talleres, actividades u otros intereses para mejorar la calidad de vida y bienestar físico, mental y social del país. Uniendo a personas y motivándolas a un crecimiento personal de forma grupal, por lo que esta dirigida a todo tipo de usuario, en caso de que sea menor de edad (menor a 18 años) solo podrán participar a las actividades apropiedas a su edad los menores con un tutor responsable mayor de 18 años. 
+### En nombre de esta red social es "PAS TIME", esta app está dirigida para aquellas personas que realizan actividades recreativas, educativas y culturales de bajo costo en ambientes de espacios libres, por lo que necesitan expandir sus conocimientos entregándoselos a personas con alto interés en sus clases, talleres, actividades u otros intereses para mejorar la calidad de vida y bienestar físico, mental y social del país. Uniendo a personas y motivándolas a un crecimiento personal de forma grupal, por lo que esta dirigida a todo tipo de usuario, en caso de que sea menor de edad (menor a 18 años) solo podrán participar a las actividades apropiedas a su edad los menores con un tutor responsable mayor de 18 años. 
 
 
 
@@ -44,11 +44,11 @@ Nuestro Primer template
 - Al recargar la página debo de poder ver los textos editados.
 
 
-En el muro nos enfocamos a que los lideres puedan publicar sus actividades con mensajes en el muro para que los usuarios puedan visualizar. Los usuarios pueden ver los mensajes anteriores, editar, eliminar y guardar. 
+### En el muro nos enfocamos a que los lideres puedan publicar sus actividades con mensajes en el muro para que los usuarios puedan visualizar. Los usuarios pueden ver los mensajes anteriores, editar, eliminar y guardar. 
 
 
 
-Te invitamos a que puedas ver cómo funciona nuestra APP “Pastime”. Recuerda que estamos iterando para las mejoras.
+
 
 
 Nuestro Segundo Template
@@ -63,7 +63,8 @@ Nuestro Segundo Template
 
 
 
-
+##Te invitamos a que puedas ver cómo funciona nuestra APP “Pastime”. Recuerda que estamos iterando para las mejoras.
+# ¡Muchas gracias!
 
 
 
