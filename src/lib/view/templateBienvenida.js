@@ -40,7 +40,7 @@ export const bienvenida = () => {
       <div id="contenedorMsmMuro">
       
         <select type="option"name="Selecciona tu Titulo" id="menuTitulo">
-            <option>Elige tu opción</option>
+            <option>Sin titulo</option>
             <option>Taller</option>
             <option>Actividad</option>
             <option>Tocata</option>
@@ -50,7 +50,7 @@ export const bienvenida = () => {
         </select>
             <input type="text" id="mensaje"  placeholder="Publicar mensaje..." form-mothod = "post">
             <button id="agregar" class="agregar">Publicar</button>
-            <button id="editar" class="agregar">Guardar</button>
+            <button id="editar" class="agregar1">Guardar</button>
       </div> 
           <div id="postMuro" class="postMuro">
           </div>  

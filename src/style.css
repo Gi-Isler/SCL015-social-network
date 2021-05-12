@@ -197,7 +197,7 @@ h2{
 }
 .menu{
     position: fixed;
-    margin-left: 50%;
+    margin-left: 30%;
     top: 35px;
     width: 0px;
     height: 23vh;
@@ -237,8 +237,8 @@ color: black;
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
-    position: fixed;
-    margin-left: 80%;
+    position: absolute;
+    margin-left: 87%;
     width: 100%;
     max-width: 1000px;
     top: 16px;
@@ -267,7 +267,7 @@ color: black;
     flex-wrap: nowrap;
     justify-content: space-between;
     align-items: flex-end;
-    margin: 4px;
+    margin: 25px;
     margin-top: -22px;
     margin-left: 235px;
     list-style-type: none;
@@ -337,6 +337,16 @@ color: black;
     background-color: #002060;
     color: #c4c4c4;
     border-radius: 100px;
+   
+}
+.agregar1{
+    margin: 5px;
+    padding: 5px;
+    width: 80px;
+    height: auto;
+    background-color: #002060;
+    color: #c4c4c4;
+    border-radius: 100px;
 }
 
 .postMuro{
@@ -354,14 +364,75 @@ color: black;
 .boxMuro{
     background-color: #f3f3f3;
     margin: 2vh;
-    padding: 2vh;
+    padding: 8vh;
     border-radius: 5%;
 }
+.menu2{
+    position: relative;
+    margin-left: 30%;
+    top: 5px;
+    width: 0px;
+    height: 8vh;
+    background:#D9D9D9;
+    color: black;
+    transition: all 300ms;
+    overflow: hidden;
+    z-index: 10;
+   
+}
+
+
+.check2{
+    color: blueviolet;
+   
+   
+    margin-left: 80%;
+    cursor: pointer;
+  }
+.check2:checked ~ .menu2{
+      width: 200px;
+  }
+  
+.editarPost .eliminarP{
+      text-decoration: none;
+      list-style: none;
+      padding: 5px;
+      cursor: pointer; 
+      transition: all 300ms;  
+      display: block;
+      width: 400px;
+      
+  }
+  
+.editarPost .eliminarP:hover{
+      background:#f3f3f3;
+
+  }
+
+.editarPost{
+    text-decoration: none;
+    color: black;
+}
+.eliminarP{
+    text-decoration: none;
+    color: black;
+}
+
 
 .icon-menu2{
-    
-    background-image: url(./images/menuPuntos.png);
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    position: relative;
+    margin-left: 80%;
+    width: 10%;
+    max-width: 1000px;
+    top: -150px;
+    cursor: pointer;
+    z-index: 10;
+    /*background-image: url(./images/menuPuntos.png);*/
     background-repeat: no-repeat;
+
 }
 
 .containerBaseEditarPerfil, .containerBaseRegistro{

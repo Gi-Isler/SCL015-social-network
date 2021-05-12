@@ -15,13 +15,13 @@ const contenedorMsmMuro = document.getElementById('postMuro');
                     <h1>${doc.data().Option}</h1>
                     <h3>${doc.data().Text}</h3>
                     <div class="configurationBox">
-                    <input type="checkbox" id="check2">
-                    <label for="check" class="icon-menu2">Menu</label>
+                    <input type="checkbox" class="check2">
+                    <label for="check" class="icon-menu2"></label>
                     <nav class="menu2">
                         <lu>
-                            <li onclick="editarPost('${doc.id}','${doc.data().Option}','${doc.data().Text}')">Editar</li>
-                            <li onclick="eliminarPost('${doc.id}')">Eliminar</li>
-                        </lu>
+                            <li class="editarPost" onclick="editarPost('${doc.id}','${doc.data().Option}','${doc.data().Text}')">Editar</li>
+                            <li class= "eliminarP" onclick="eliminarPost('${doc.id}')">Eliminar</li>
+                        </ul>
                     </nav>
                 </div>
                 </div>
