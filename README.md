@@ -18,7 +18,7 @@ Por lo que es importante tomar estas consideraciones:
 
 
 
- En nombre de esta red social es "PAS TIME", esta app está dirigida para aquellas personas que realizan actividades recreativas, educativas y culturales de bajo costo en ambientes de espacios libres, por lo que necesitan expandir sus conocimientos entregándoselos a personas con alto interés en sus clases, talleres, actividades u otros intereses para mejorar la calidad de vida y bienestar físico, mental y social del país. Uniendo a personas y motivándolas a un crecimiento personal de forma grupal, por lo que esta dirigida a todo tipo de usuario, en caso de que sea menor de edad (menor a 18 años) solo podrán participar a las actividades apropiedas a su edad los menores con un tutor responsable mayor de 18 años. 
+ El nombre de esta red social es "PAS TIME", esta app está dirigida para aquellas personas que realizan actividades recreativas, educativas y culturales de bajo costo en ambientes de espacios libres, por lo que necesitan expandir sus conocimientos entregándoselos a personas con alto interés en sus clases, talleres, actividades u otros intereses para mejorar la calidad de vida y bienestar físico, mental y social del país. Uniendo a personas y motivándolas a un crecimiento personal de forma grupal, por lo que esta dirigida a todo tipo de usuario, en caso de que sea menor de edad (menor a 18 años) solo podrán participar a las actividades apropiedas a su edad los menores con un tutor responsable mayor de 18 años. 
 
 
 
